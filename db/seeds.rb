@@ -23,3 +23,28 @@ drinks["drinks"].each do |drink|
 end
 
 puts 'Finished!'
+
+
+puts 'Cleaning database...'
+Cocktail.destroy_all
+
+puts 'Creating cocktais...'
+cocktails_attributes = [
+  {
+    name:         'White Russian',
+  },
+  {
+    name:         'Planteur',
+  },
+  {
+    name:         'Cuba libre',
+  },
+  {
+    name:         'Caipirinha',
+  },
+  {
+    name:         'Sex on beach',
+  }
+]
+Cocktail.create!(cocktails_attributes)
+puts 'Finished!'
